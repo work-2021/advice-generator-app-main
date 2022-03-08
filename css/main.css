@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "manrope";
+  src: url("../font/manrope-extra-bold.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "manrope";
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1B232E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container {
+  width: 90%;
+}
+.container .advice {
+  width: 100%;
+  background-color: #313A49;
+  border-radius: 6pt;
+  padding: 15px 15px 35px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+.container .advice .id {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #52FFA8;
+  letter-spacing: 1.4px;
+  font-size: .8em;
+}
+.container .advice .text {
+  font-size: 1.4em;
+  color: #CEE3E9;
+  line-height: 1.6em;
+}
+.container .advice .divider {
+  min-height: 25px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container .advice .divider:before {
+  content: "";
+  width: 42%;
+  height: 1px;
+  background-color: #CEE3E9;
+  opacity: .7;
+  position: absolute;
+  right: 0;
+}
+.container .advice .divider:after {
+  content: "";
+  width: 42%;
+  height: 1px;
+  background-color: #CEE3E9;
+  opacity: .7;
+  position: absolute;
+  left: 0;
+}
+.container .advice .generate-advice {
+  width: 60px;
+  height: 60px;
+  background-color: #52FFA8;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.container .advice .generate-advice:hover,
+.container .advice .generate-advice:focus {
+  background-color: #6CFFB6;
+  box-shadow: 0 0 10px #6CFFB6,
+  0 0 15px #6CFFB6;
+  animation: press .4s linear forwards;
+}
+@keyframes press {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(.95);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+@media (min-width: 680px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (min-width: 980px) {
+  .container {
+    width: 40%;
+  }
+}
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: #FFF;
+}
+
+.attribution a {
+  color: #FFF;
+}
